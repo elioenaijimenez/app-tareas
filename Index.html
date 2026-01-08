@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega de Tareas</title> <link rel="manifest" href="manifest.json">
+    <style>
+        /* Esto quita los bordes blancos feos para que se vea pantalla completa */
+        body { margin: 0; padding: 0; overflow: hidden; background-color: #000; }
+        
+        /* Esto hace que la ventana del formulario ocupe el 100% del espacio */
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="https://script.google.com/macros/s/AKfycbxYiL2dreeo35Zdjrz79MQC0V3hnOeG8tfZSlTi_fsGgBE8g4cGbWxGe0ItRMeF26RDJA/exec"></iframe>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(() => console.log('Service Worker registrado! 😎'))
+          .catch(error => console.log('Falló el registro:', error));
+      }
+    </script>
+</body>
+</html>
